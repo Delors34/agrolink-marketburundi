@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>Tableau de Bord - AgroLink Burundi</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <style>
+    body { font-family: Arial, padding: 20px; }
+    h2 { color: #006400;}
+    nav a {color:#006400;}
+  </style>
+</head>
+<body>
+  <h2>Tableau de Bord : Nadia N. (Productrice)</h2>
+  <div id="graph" style="width:100%;max-width:600px;margin:2em auto;"></div>
+  <nav>
+    <a href="market.html">Voir le marché</a> |
+    <a href="index.html">Accueil</a>
+  </nav>
+  <script>
+    var prod_labels = ['Haricot', 'Maïs', 'Manioc'];
+    var prod_values = [850, 600, 1200];
+
+    var data = [{
+      x: prod_labels,
+      y: prod_values,
+      type: 'bar',
+      marker: {color: '#3cb371'}
+    }];
+
+    var layout = {
+      title: "Production Agricole sur AgroLink (Quantités disponibles)",
+      xaxis: {title: "Produit"},
+      yaxis: {title: "Quantité (kg)"},
+      template: "plotly_white"
+    };
+
+    Plotly.newPlot('graph', data, layout);
+  </script>
+</body>
+</html>
