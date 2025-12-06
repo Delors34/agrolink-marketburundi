@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>Contact & Conseils AgroLink</title>
+  <style>
+    body { font-family: Arial, background: #f0f8ff;}
+    .container { max-width:500px; margin:2em auto; background:#fff;padding:2em;border-radius:7px;}
+    label { display: block; margin-top:1em;}
+    .btn { background: #006400; color:#fff; border:none; padding:8px 16px; border-radius:5px; margin-top:1em;}
+  </style>
+  <script>
+    function sendMsg(){
+      alert("Merci, votre demande est envoyée à AgroLink !");
+    }
+  </script>
+</head>
+<body>
+  <div class="container">
+    <h2>Contactez AgroLink</h2>
+    <form onsubmit="sendMsg();return false;">
+      <label>Votre nom :</label><input type="text" required>
+      <label>Votre email :</label><input type="email" required>
+      <label>Votre message/demande :</label><textarea required></textarea>
+      <button class="btn" type="submit">Envoyer</button>
+    </form>
+  </div>
+  <nav>
+    <a href="index.html">Accueil</a>
+  </nav>
+</body>
+</html>
