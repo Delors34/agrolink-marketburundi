@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>Connexion · AgroLink Burundi</title>
+  <style>
+    body { font-family: Arial, background: #f0f8ff; }
+    .container { max-width: 400px; margin: 60px auto; background: #fff; padding: 2em; border-radius:10px; }
+    h2 { color: #006400;}
+    .btn { background: #008000; color: #fff; border: none; padding: 10px 20px; border-radius:5px; cursor: pointer;}
+    label { display: block; margin-top: 12px;}
+  </style>
+  <script>
+    function goToMarket() {
+      var role = document.getElementById('role').value;
+      var name = document.getElementById('username').value;
+      sessionStorage.setItem('role', role);
+      sessionStorage.setItem('username', name);
+      window.location.href = 'index.html';
+    }
+  </script>
+</head>
+<body>
+  <div class="container">
+    <h2>Connexion à AgroLink</h2>
+    <label>Votre nom :</label>
+    <input type="text" id="username" required>
+    <label>Votre rôle :</label>
+    <select id="role">
+      <option value="producteur">Producteur</option>
+      <option value="acheteur">Acheteur</option>
+      <option value="invité">Invité</option>
+    </select>
+    <br><br>
+    <button class="btn" onclick="goToMarket()">Entrer</button>
+  </div>
+</body>
+</html>
