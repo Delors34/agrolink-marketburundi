@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>AgroLink-MarketPlace Burundi</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body { font-family: Arial, background: #f0f8ff; }
+    header { background:#006400;color:#fff;padding:1em;}
+    section {max-width:640px;margin:2em auto;padding:1.5em;background:#fff;border-radius:10px;box-shadow:0 4px 8px rgba(0,0,0,0.1);}
+    footer {background:#006400;color:#fff;text-align:center;padding:1em;}
+    nav a {color:#fff;}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>AgroLink-MarketPlace : Lien direct pour le marché burundais</h1>
+    <nav>
+      <a href="dashboard.html">Tableau de Bord</a> |
+      <a href="market.html">Marché Agricole</a>
+    </nav>
+  </header>
+  <section>
+    <h2>Bienvenue sur AgroLink-MarketPlace!</h2>
+    <p>La plateforme agricole du Burundi. Connectez-vous directement aux producteurs et acheteurs burundais. Obtenez les prix en BIF, les statistiques et les tendances.</p>
+  </section>
+  <footer>
+    &copy; 2025 AgroLink-MarketPlace Burundi
+  </footer>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>Tableau de Bord - AgroLink Burundi</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <style>
+    body { font-family: Arial, padding: 20px; }
+    h2 { color: #006400;}
+    nav a {color:#006400;}
+  </style>
+</head>
+<body>
+  <h2>Tableau de Bord : Nadia N. (Productrice)</h2>
+  <div id="graph" style="width:100%;max-width:600px;margin:2em auto;"></div>
+  <nav>
+    <a href="market.html">Voir le marché</a> |
+    <a href="index.html">Accueil</a>
+  </nav>
+  <script>
+    var prod_labels = ['Haricot', 'Maïs', 'Manioc'];
+    var prod_values = [850, 600, 1200];
+
+    var data = [{
+      x: prod_labels,
+      y: prod_values,
+      type: 'bar',
+      marker: {color: '#3cb371'}
+    }];
+
+    var layout = {
+      title: "Production Agricole sur AgroLink (Quantités disponibles)",
+      xaxis: {title: "Produit"},
+      yaxis: {title: "Quantité (kg)"},
+      template: "plotly_white"
+    };
+
+    Plotly.newPlot('graph', data, layout);
+  </script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>Marché Agricole - AgroLink Burundi</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body { font-family: Arial, padding: 20px; }
+    h2 { color: #006400;}
+    table { border-collapse: collapse; width: 700px; max-width: 100%; margin-top: 2em; }
+    th, td { border: 1px solid #ccc; padding:8px;}
+    th { background-color: #e6ffe6;}
+    nav a {color:#006400;}
+  </style>
+</head>
+<body>
+  <h2>Marché Agricole d'AgroLink</h2>
+  <table>
+    <tr>
+      <th>Produit</th>
+      <th>Prix (BIF/kg)</th>
+      <th>Quantité (kg)</th>
+      <th>Producteur</th>
+    </tr>
+    <tr><td>Haricot</td><td>1500</td><td>850</td><td>Nadia N.</td></tr>
+    <tr><td>Maïs</td><td>1200</td><td>600</td><td>Nadia N.</td></tr>
+    <tr><td>Manioc</td><td>800</td><td>1200</td><td>Nadia N.</td></tr>
+    <!-- Ajoute plus de produits typiques du Burundi si besoin -->
+    <tr><td>Banane</td><td>1000</td><td>700</td><td>Nadia N.</td></tr>
+    <tr><td>Riz</td><td>1800</td><td>500</td><td>Elias M.</td></tr>
+    <tr><td>Café</td><td>2500</td><td>400</td><td>Elias M.</td></tr>
+  </table>
+  <nav style="margin-top:20px;">
+    <a href="dashboard.html">Retour au Tableau de Bord</a>
+  </nav>
+</body>
+</html>
