@@ -8,25 +8,32 @@
     .container { max-width:500px; margin:2em auto; background:#fff;padding:2em;border-radius:7px;}
     label { display: block; margin-top:1em;}
     .btn { background: #006400; color:#fff; border:none; padding:8px 16px; border-radius:5px; margin-top:1em;}
+    .kirundi { color:#008000; font-weight:bold; }
+    .conseil { font-size:0.97em; margin-top:1em;}
   </style>
   <script>
     function sendMsg(){
-      alert("Merci, votre demande est envoyée à AgroLink !");
+      alert("Urakoze cane, ubutumwa bwawe bwashitse kuri AgroLink! (Merci, votre demande est envoyée à AgroLink !)");
     }
   </script>
 </head>
 <body>
   <div class="container">
     <h2>Contactez AgroLink</h2>
+    <div class="conseil">
+      <span class="kirundi">Karibu ku rubuga rwacu!</span> (Bienvenue sur notre plateforme!)<br>
+      <span class="kirundi">Mwihangane mu bikorwa vy’uburimyi!</span> (Bon courage dans vos activités agricoles!)<br>
+      <span class="kirundi">Ufise ikibazo canke iciyumviro ? Twandikire hano.</span> (Vous avez une question ou une suggestion ? Écrivez-nous ici.)
+    </div>
     <form onsubmit="sendMsg();return false;">
-      <label>Votre nom :</label><input type="text" required>
-      <label>Votre email :</label><input type="email" required>
-      <label>Votre message/demande :</label><textarea required></textarea>
-      <button class="btn" type="submit">Envoyer</button>
+      <label>Izina ryawe (Votre nom) :</label><input type="text" required>
+      <label>Imeri yawe (Votre email) :</label><input type="email" required>
+      <label>Ubutumwa bwawe (Votre message/demande) :</label><textarea required></textarea>
+      <button class="btn" type="submit">Tuma (Envoyer)</button>
     </form>
   </div>
   <nav>
-    <a href="index.html">Accueil</a>
+    <a href="index.html">Accueil (Ahabanza)</a>
   </nav>
 </body>
 </html>
